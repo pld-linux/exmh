@@ -2,7 +2,7 @@ Summary:	The exmh mail handling system.
 Name:		exmh
 Version:	2.5
 Release:	1
-Copyright:	freeware
+License:	Freeware
 Group:		Applications/Mail
 Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
@@ -40,7 +40,7 @@ posortowanych, nieprzeczytanych wiadomo¶ci.
 %prep
 %setup -q
 for i in *.MASTER; do
-	cp $i ${i%%.MASTER}
+	cp -f $i ${i%%.MASTER}
 done
 %patch -p1
 
@@ -49,7 +49,7 @@ echo 'auto_mkindex ./lib *.tcl' | tclsh
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail/
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/exmh-%{version}}
 
 for i in exmh exmh-bg exmh-async ftp.expect; do
@@ -64,8 +64,7 @@ cp -ar lib/* $RPM_BUILD_ROOT%{_libdir}/exmh-%{version}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail/
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	COPYRIGHT exmh.CHANGES exmh.README
+gzip -9nf COPYRIGHT exmh.CHANGES exmh.README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -79,4 +78,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/exmh-async
 %attr(755,root,root) %{_bindir}/ftp.expect
 %{_libdir}/exmh-%{version}
-%{_mandir}/man1/exmh.1.gz
+%{_mandir}/man1/exmh.1*
