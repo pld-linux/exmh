@@ -47,7 +47,7 @@ echo 'auto_mkindex ./lib *.tcl' | tclsh
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT %{_applnkdir}/Networking/Mail/
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail/
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/exmh-%{version}}
 
 for i in exmh exmh-bg exmh-async ftp.expect; do
@@ -63,14 +63,14 @@ cp -ar lib/* $RPM_BUILD_ROOT%{_libdir}/exmh-%{version}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail/
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	COPYRIGHT exmh.CHANGES exmh.COLORS exmh.README
+	COPYRIGHT exmh.CHANGES exmh.README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {COPYRIGHT,exmh.CHANGES,exmh.COLORS,exmh.README}.gz
+%doc {COPYRIGHT,exmh.CHANGES,exmh.README}.gz
 %{_applnkdir}/Networking/Mail/exmh.desktop
 %attr(755,root,root) %{_bindir}/exmh
 %attr(755,root,root) %{_bindir}/exmh-bg
