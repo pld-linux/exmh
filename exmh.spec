@@ -12,7 +12,7 @@ Version:	2.5
 Release:	1
 License:	Freeware
 Group:		Applications/Mail
-Source0:	http://prdownloads.sourceforge.net/exmh/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/exmh/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
 Patch1:		%{name}-smproxy.patch
