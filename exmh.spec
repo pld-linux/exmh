@@ -13,6 +13,7 @@ Release:	1
 License:	Freeware
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/exmh/%{name}-%{version}.tar.gz
+# Source0-md5:	eeaff73d05a4526a91cb17cb8af97269
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
 Patch1:		%{name}-smproxy.patch
