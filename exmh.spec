@@ -8,12 +8,12 @@ Summary(ru):	Почтовая программа EXMH
 Summary(sv):	E-postlДsare som kan hantera e-postmappar av mh-typ
 Summary(tr):	e-posta yazЩlЩmЩ
 Name:		exmh
-Version:	2.5
+Version:	2.6.3
 Release:	1
 License:	Freeware
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/exmh/%{name}-%{version}.tar.gz
-# Source0-md5:	eeaff73d05a4526a91cb17cb8af97269
+# Source0-md5:	5b04d70b7f827f4e520d8b68b28b3efe
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
 Patch1:		%{name}-smproxy.patch
