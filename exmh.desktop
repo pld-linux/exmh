@@ -1,6 +1,7 @@
 [Desktop Entry]
-Name=exmh
+Name=Exmh
 Comment=MH Mail Front End
+Comment[pl]=Nakładka pocztowa MH
 Exec=exmh
 Terminal=0
 Type=Application
