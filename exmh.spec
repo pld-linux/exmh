@@ -1,7 +1,8 @@
-Summary:	The exmh mail handling system.
+Summary:	The exmh mail handling system
 Summary(es):	Interface gráfica para el programa de mail MH
 Summary(de):	EXMH-Mail-Programm
 Summary(fr):	Programme de courrier EXMH
+Summary(pl):	System obs³ugi poczty exmh
 Summary(pt_BR):	Interface gráfica para o programa de mail MH
 Summary(ru):	ðÏÞÔÏ×ÁÑ ÐÒÏÇÒÁÍÍÁ EXMH
 Summary(sv):	E-postläsare som kan hantera e-postmappar av mh-typ
@@ -17,7 +18,7 @@ Group(pt):	Aplicações/Correio Eletrônico
 Source0:	http://prdownloads.sourceforge.net/exmh/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
-patch1:		%{name}-smproxy.patch
+Patch1:		%{name}-smproxy.patch
 URL:		http://www.beedub.com/exmh/
 Requires:	mh
 Requires:	metamail
