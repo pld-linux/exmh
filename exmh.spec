@@ -1,19 +1,17 @@
 Summary:	The exmh mail handling system.
 Name:		exmh
-Version:	2.0.2
-Release:	8
-Requires:	mh metamail
+Version:	2.2
+Release:	1
 Copyright:	freeware
 Group:		Applications/Mail
 Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
 Url:		http://www.beedub.com/exmh/
-Source0:	ftp://ftp.sunlabs.com/%{name}-%{version}.tar.Z
-Source1:	exmh.wmconfig
-Patch1:		exmh-2.0.2-conf.patch
-Patch2:		exmh-2.0.2-smproxy.patch
+Source0:	ftp://ftp.scriptics.com/pub/tcl/exmh/%{name}-%{version}.tar.gz
+Source1:	exmh.desktop
+Requires:	mh metamail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-BuildArchitectures:	noarch
+BuildArch:	noarch
 
 %description
 Exmh provides an X interface for MH/nmh mail, a feature-rich email
@@ -43,16 +41,13 @@ posortowanych, nieprzeczytanych wiadomo¶ci.
 for i in *.MASTER; do
 	cp $i ${i%%.MASTER}
 done
-%patch1 -p1
-%patch2 -p1
-find . -name "*.orig" -exec rm {} \;
 
 %build
 echo 'auto_mkindex ./lib *.tcl' | tclsh
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig
+install -d $RPM_BUILD_ROOT %{_applnkdir}/Networking/Mail/
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/exmh-%{version}}
 
 for i in exmh exmh-bg exmh-async ftp.expect; do
@@ -65,7 +60,7 @@ done
 
 cp -ar lib/* $RPM_BUILD_ROOT%{_libdir}/exmh-%{version}
 
-install $RPM_SOURCE_DIR/exmh.wmconfig $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/exmh
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail/
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	COPYRIGHT exmh.CHANGES exmh.COLORS exmh.README
@@ -76,7 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {COPYRIGHT,exmh.CHANGES,exmh.COLORS,exmh.README}.gz
-%config %{_sysconfdir}/X11/wmconfig/exmh
+%{_applnkdir}/Networking/Mail/exmh.desktop
 %attr(755,root,root) %{_bindir}/exmh
 %attr(755,root,root) %{_bindir}/exmh-bg
 %attr(755,root,root) %{_bindir}/exmh-async
