@@ -48,7 +48,7 @@ echo 'auto_mkindex ./lib *.tcl' | tclsh
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail/
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/exmh}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/exmh-%{version}}
 
 for i in exmh exmh-bg exmh-async ftp.expect; do
 	install $i $RPM_BUILD_ROOT%{_bindir}
@@ -58,7 +58,7 @@ for i in *.l; do
 	install $i $RPM_BUILD_ROOT%{_mandir}/man1/${i%%.l}.1
 done
 
-cp -ar lib/* $RPM_BUILD_ROOT%{_libdir}/exmh
+cp -ar lib/* $RPM_BUILD_ROOT%{_libdir}/exmh-%{version}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail/
 
@@ -76,5 +76,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/exmh-bg
 %attr(755,root,root) %{_bindir}/exmh-async
 %attr(755,root,root) %{_bindir}/ftp.expect
-%{_libdir}/exmh
+%{_libdir}/exmh-%{version}
 %{_mandir}/man1/exmh.1.gz
