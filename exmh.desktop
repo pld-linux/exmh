@@ -1,7 +1,12 @@
 [Desktop Entry]
 Name=Exmh
 Comment=MH Mail Front End
+Comment[de]=EXMH-Mail-Programm
+Comment[fr]=Programme de courrier EXMH
 Comment[pl]=NakÅ‚adka pocztowa MH
+Comment[sv]=E-postläsare som kan hantera e-postmappar av mh-typ
+Comment[ru]=ğÏŞÔÏ×ÁÑ ĞÒÏÇÒÁÍÍÁ EXMH
+Comment[tr]=e-posta yazılımı
 Exec=exmh
 Terminal=0
 Type=Application
