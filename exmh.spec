@@ -4,6 +4,7 @@ Summary(de):	EXMH-Mail-Programm
 Summary(fr):	Programme de courrier EXMH
 Summary(pt_BR):	Interface gráfica para o programa de mail MH
 Summary(ru):	ğÏŞÔÏ×ÁÑ ĞÒÏÇÒÁÍÍÁ EXMH
+Summary(sv):	E-postläsare som kan hantera e-postmappar av mh-typ
 Summary(tr):	e-posta yazılımı
 Name:		exmh
 Version:	2.5
