@@ -10,4 +10,5 @@ Comment[tr]=E-posta yazılımı
 Exec=exmh
 Terminal=0
 Type=Application
+Encoding=UTF-8
 # vi: encoding=utf-8
