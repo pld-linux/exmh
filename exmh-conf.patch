@@ -1,0 +1,110 @@
+--- exmh-2.5/exmh-async.sjl	Tue Dec 17 17:37:47 1996
++++ exmh-2.5/exmh-async	Tue Dec 17 18:01:10 1996
+@@ -1,4 +1,4 @@
+-#!wish -f
++#!/usr/bin/wish -f
+ #
+ # async editor frontend for exmh
+ # Arg1: invoking interpreter's name (from [winfo name .])
+
+*** exmh-2.5/exmh	Thu Jul 23 19:02:17 1999
+--- exmh-2.5/exmh~	Thu Jul 29 21:31:11 1999
+***************
+*** 1,4 ****
+! #!wish -f
+  #
+  # TK interface to the MH Mail utility
+  # Brent Welch <welch@acm.org>
+--- 1,4 ----
+! #!/usr/bin/wish -f
+  #
+  # TK interface to the MH Mail utility
+  # Brent Welch <welch@acm.org>
+***************
+*** 17,22 ****
+--- 17,50 ----
+  
+  # The following lines are patched by exmh.install
+  #CONFIGURATION
++ set wish /usr/bin/wish
++ set exmh(version) {version 2.5 01/15/2001}
++ set exmh(name) exmh
++ set exmh(maintainer) welch@acm.org
++ set mh_path /usr/bin
++ set exmh(slocal) /usr/lib/nmh/slocal
++ set mime(dir) /usr/bin
++ set mailcap_default /etc/mailcap
++ set mimetypes_default /etc/mime.types
++ set exmh(expect) /usr/bin/expect
++ set exmh(expectk) /usr/bin/expectk
++ set faces(dir) /usr/lib/faces
++ set faces(set,user) {local users usenix misc}
++ set faces(set,unknown) {domains unknown}
++ set faces(set,news) news
++ set faces(defaultDomain) eng.sun.com
++ set faces(suffix) {xpm gif xbm}
++ set pgp(pgp,path) /usr/bin
++ set pgp(pgp5,path) /usr/bin
++ set pgp(gpg,path) /usr/bin
++ set pgp(pgp6,path) /usr/bin
++ set glimpse(path) /usr/bin
++ set sound(cmd) {/usr/bin/play -v 38}
++ set exmh(library) /usr/lib/exmh-2.5
++ set install(dir,bin) /usr/bin
++ set install(dir,man) /usr/man/manl
++ set install(dir,lib) /usr/lib/exmh-2.5
++ 
+  #END CONFIGURATION
+  
+  if [catch {file join a b}] {
+child process exited abnormally
+
+*** exmh-2.5/exmh-bg        Thu Jul 22 19:02:17 1999
+--- exmh-2.5/exmh-bg~       Thu Jul 29 21:31:11 1999
+***************
+*** 1,4 ****
+! #!wish -f
+  #
+  # Background processing script for exmh.
+  # This does stuff and then sends messages to the background module
+--- 1,4 ----
+! #!/usr/bin/wish -f
+  #
+  # Background processing script for exmh.
+  # This does stuff and then sends messages to the background module
+***************
+*** 17,22 ****
+--- 17,50 ----
+  
+  #CONFIGURATION
++ set wish /usr/bin/wish
++ set exmh(version) {version 2.5 (01/15/2001)}
++ set exmh(name) exmh
++ set exmh(maintainer) welch@acm.org
++ set mh_path /usr/bin
++ set exmh(slocal) /usr/lib/nmh/slocal
++ set mime(dir) /usr/bin
++ set mailcap_default /etc/mailcap
++ set mimetypes_default /etc/mime.types
++ set exmh(expect) /usr/bin/expect
++ set exmh(expectk) /usr/bin/expectk
++ set faces(dir) /usr/lib/faces/
++ set faces(set,user) {local users usenix misc}
++ set faces(set,unknown) {domains unknown}
++ set faces(set,news) news
++ set faces(defaultDomain) eng.sun.com
++ set faces(suffix) {xpm gif xbm}
++ set pgp(pgp,path) /usr/bin
++ set pgp(pgp5,path) /usr/bin
++ set pgp(gpg,path) /usr/bin
++ set pgp(pgp6,path) /usr/bin
++ set glimpse(path) /usr/bin
++ set sound(cmd) {/usr/bin/play -v 38}
++ set exmh(library) /usr/lib/exmh-2.5
++ set install(dir,bin) /usr/bin
++ set install(dir,man) /usr/man/manl
++ set install(dir,lib) /usr/lib/exmh-2.5
++ 
+  #END CONFIGURATION
+  
+
