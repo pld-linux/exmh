@@ -14,11 +14,13 @@ Group:		Applications/Mail
 Group(de):	Applikationen/Post
 Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
-Url:		http://www.beedub.com/exmh/
 Source0:	http://prdownloads.sourceforge.net/exmh/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
-Requires:	mh metamail
+patch1:		%{name}-smproxy.patch
+URL:		http://www.beedub.com/exmh/
+Requires:	mh
+Requires:	metamail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
 
@@ -81,7 +83,8 @@ yetenekleri vardýr. Ses desteði için sox (ya da play) gerekir.
 for i in *.MASTER; do
 	cp -f $i ${i%%.MASTER}
 done
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 echo 'auto_mkindex ./lib *.tcl' | tclsh
