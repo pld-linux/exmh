@@ -1,14 +1,15 @@
 Summary:	The exmh mail handling system.
 Name:		exmh
-Version:	2.2
+Version:	2.5
 Release:	1
 Copyright:	freeware
 Group:		Applications/Mail
 Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
 Url:		http://www.beedub.com/exmh/
-Source0:	ftp://ftp.scriptics.com/pub/tcl/exmh/%{name}-%{version}.tar.gz
-Source1:	exmh.desktop
+Source0:	http://prdownloads.sourceforge.net/exmh/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
+Patch0:		%{name}-conf.patch
 Requires:	mh metamail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
@@ -41,6 +42,7 @@ posortowanych, nieprzeczytanych wiadomo¶ci.
 for i in *.MASTER; do
 	cp $i ${i%%.MASTER}
 done
+%patch -p1
 
 %build
 echo 'auto_mkindex ./lib *.tcl' | tclsh
