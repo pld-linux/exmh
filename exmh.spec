@@ -12,9 +12,6 @@ Version:	2.5
 Release:	1
 License:	Freeware
 Group:		Applications/Mail
-Group(de):	Applikationen/Post
-Group(pl):	Aplikacje/Poczta
-Group(pt):	Aplicações/Correio Eletrônico
 Source0:	http://prdownloads.sourceforge.net/exmh/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
