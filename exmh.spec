@@ -1,9 +1,16 @@
 Summary:	The exmh mail handling system.
+Summary(es):	Interface gráfica para el programa de mail MH
+Summary(de):	EXMH-Mail-Programm
+Summary(fr):	Programme de courrier EXMH
+Summary(pt_BR):	Interface gráfica para o programa de mail MH
+Summary(ru):	ğÏŞÔÏ×ÁÑ ĞÒÏÇÒÁÍÍÁ EXMH
+Summary(tr):	e-posta yazılımı
 Name:		exmh
 Version:	2.5
 Release:	1
 License:	Freeware
 Group:		Applications/Mail
+Group(de):	Applikationen/Post
 Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
 Url:		http://www.beedub.com/exmh/
@@ -28,6 +35,22 @@ MH/nmh mail system much more user friendly. You may also want to use
 exmh if you prefer a graphical user interface for your mail client.
 Note that you will also have to install the nmh package.
 
+%description -l de
+exmh ist eine grafische Oberfläche für das MH-Mail-System. Zu den
+Funktionen gehören MIME-Unterstützung, Faces, Glimpse-Indexing,
+farbiges Markieren, PGP-Schnittstelle usw. Erfordert sox (oder play)
+für Sound-Unterstützung.
+
+%description -l es
+exmh es una interface gráfica para el sistema de mail MH. Incluye
+soporte para MINE, cuadros, indexación rápida, realce de colores,
+interface PGP, y más.
+
+%description -l fr
+exmh est uen interface graphique au système de courrier MH. Il gère
+MIME, les aspects, l'indexation glimpse, la mise en valeur par
+couleurs, PGP, et autres. Il faut sox (ou play) pour gérér le son.
+
 %description -l pl
 Dziêki exmh otrzymujemy interfejs do bogatego w funkcje systemu
 obs³ugi poczty MH/nmh. Exmh obs³uguje prawie wszystkie funkcje MH:
@@ -36,6 +59,21 @@ wiadomo¶ci oraz sortowanie poczty przychodz±cej do ró¿nych katalogów.
 Exmh pod¶wietla foldery z nowymi wiadomo¶ciami i wskazuje te, które
 nie zosta³y jeszcze przeczytane, dziêki czemu nie traci siê
 posortowanych, nieprzeczytanych wiadomo¶ci.
+
+%description -l pt_BR
+exmh é uma interface gráfica para o sistema de mail MH. Ela inclui
+suporte para MIME, quadros, indexação rápida, destacamento de cores,
+interface PGP, e mais.
+
+%description -l ru
+exmh - ÜÔÏ ÇÒÁÆÉŞÅÓËÉÊ ÉÎÔÅÒÆÅÊÓ Ë ĞÏŞÔÏ×ÏÊ ÓÉÓÔÅÍÅ MH. ïÎ ×ËÌÀŞÁÅÔ
+ĞÏÄÄÅÒÖËÕ MIME, faces, glimpse indexing, color highlighting, ÉÎÔÅÒÆÅÊÓ
+PGP É ÍÎÏÇÏÅ ÄÒÕÇÏÅ. äÌÑ ĞÏÄÄÅÒÖËÉ Ú×ÕËÁ ÔÒÅÂÕÅÔÓÑ sox.
+
+%description -l tr
+exmh, yaygın olarak kullanılan mh paketi için X11 arayüzüdür. MIME
+desteği, PGP desteği, faces, glimpse yardımıyla dizin oluşturma gibi
+yetenekleri vardır. Ses desteği için sox (ya da play) gerekir.
 
 %prep
 %setup -q
@@ -49,8 +87,8 @@ echo 'auto_mkindex ./lib *.tcl' | tclsh
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/exmh-%{version}}
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail \
+	$RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/exmh-%{version}}
 
 for i in exmh exmh-bg exmh-async ftp.expect; do
 	install $i $RPM_BUILD_ROOT%{_bindir}
