@@ -27,6 +27,14 @@ MH/nmh mail system much more user friendly.  You may also want to use
 exmh if you prefer a graphical user interface for your mail client.  Note
 that you will also have to install the nmh package.
 
+%description -l pl
+Dziêki exmh otrzymujemy interfejs do bogatego w funkcje systemu obs³ugi poczty
+MH/nmh. Exmh obs³uguje prawie wszystkie funkcje MH: przegl±danie wiadomo¶ci
+w katalogu, czytanie/usuwanie/kolejkowanie wiadomo¶ci oraz sortowanie poczty
+przychodz±cej do ró¿nych katalogów. Exmh pod¶wietla foldery z nowymi 
+wiadomo¶ciami i wskazuje te, które nie zosta³y jeszcze przeczytane, dziêki
+czemu nie traci siê posortowanych, nieprzeczytanych wiadomo¶ci.
+
 %prep
 %setup -q
 for i in *.MASTER; do
