@@ -1,0 +1,12 @@
+--- exmh-2.0.2/exmh.smproxy	Sat Apr 10 14:30:21 1999
++++ exmh-2.0.2/exmh	Sat Apr 10 14:30:42 1999
+@@ -87,6 +87,9 @@
+ # For session managers
+ wm command . "$argv0 $argv"
+ 
++# set this so smproxy will see us
++wm client . "[exec hostname]"
++
+ # modified by k.furukawa, jul.1994.  for kanji
+ # this piece of code enables japanese kanji display if you use
+ # tk-jp extension and JIS code.  if you use EUC for MH processing 
