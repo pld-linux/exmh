@@ -104,14 +104,12 @@ cp -ar lib/* $RPM_BUILD_ROOT%{_libdir}/exmh-%{version}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail/
 
-gzip -9nf COPYRIGHT exmh.CHANGES exmh.README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {COPYRIGHT,exmh.CHANGES,exmh.README}.gz
+%doc COPYRIGHT exmh.CHANGES exmh.README
 %{_applnkdir}/Networking/Mail/exmh.desktop
 %attr(755,root,root) %{_bindir}/exmh
 %attr(755,root,root) %{_bindir}/exmh-bg
