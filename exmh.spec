@@ -10,7 +10,7 @@ Source0:	ftp://ftp.sunlabs.com/exmh-2.0.2.tar.Z
 Source1:	exmh.wmconfig
 Patch1:		exmh-2.0.2-conf.patch
 Patch2:		exmh-2.0.2-smproxy.patch
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArchitectures: noarch
 
 %description
