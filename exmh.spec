@@ -8,16 +8,17 @@ Summary(ru):	ðÏÞÔÏ×ÁÑ ÐÒÏÇÒÁÍÍÁ EXMH
 Summary(sv):	E-postläsare som kan hantera e-postmappar av mh-typ
 Summary(tr):	e-posta yazýlýmý
 Name:		exmh
-Version:	2.6.3
+Version:	2.7.2
 Release:	1
 License:	Freeware
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/exmh/%{name}-%{version}.tar.gz
-# Source0-md5:	5b04d70b7f827f4e520d8b68b28b3efe
+# Source0-md5:	fdb7c6ff26d0429ea950590a36f1369f
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
 Patch1:		%{name}-smproxy.patch
 URL:		http://www.beedub.com/exmh/
+BuildRequires:	tcl
 Requires:	mh
 Requires:	metamail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -90,7 +91,7 @@ echo 'auto_mkindex ./lib *.tcl' | tclsh
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail \
+install -d $RPM_BUILD_ROOT%{_desktopdir} \
 	$RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/exmh-%{version}}
 
 for i in exmh exmh-bg exmh-async ftp.expect; do
@@ -103,7 +104,7 @@ done
 
 cp -ar lib/* $RPM_BUILD_ROOT%{_libdir}/exmh-%{version}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Networking/Mail/
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -111,7 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYRIGHT exmh.CHANGES exmh.README
-%{_applnkdir}/Networking/Mail/exmh.desktop
+%{_desktopdir}/exmh.desktop
 %attr(755,root,root) %{_bindir}/exmh
 %attr(755,root,root) %{_bindir}/exmh-bg
 %attr(755,root,root) %{_bindir}/exmh-async
