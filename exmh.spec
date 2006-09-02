@@ -1,6 +1,6 @@
 Summary:	The exmh mail handling system
-Summary(es):	Interface gráfica para el programa de mail MH
 Summary(de):	EXMH-Mail-Programm
+Summary(es):	Interface gráfica para el programa de mail MH
 Summary(fr):	Programme de courrier EXMH
 Summary(pl):	System obs³ugi poczty exmh
 Summary(pt_BR):	Interface gráfica para o programa de mail MH
@@ -19,10 +19,10 @@ Patch0:		%{name}-conf.patch
 Patch1:		%{name}-smproxy.patch
 URL:		http://www.beedub.com/exmh/
 BuildRequires:	tcl
-Requires:	mh
 Requires:	metamail
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Requires:	mh
 BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Exmh provides an X interface for MH/nmh mail, a feature-rich email
@@ -102,7 +102,7 @@ for i in *.l; do
 	install $i $RPM_BUILD_ROOT%{_mandir}/man1/${i%%.l}.1
 done
 
-cp -ar lib/* $RPM_BUILD_ROOT%{_libdir}/exmh-%{version}
+cp -a lib/* $RPM_BUILD_ROOT%{_libdir}/exmh-%{version}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
