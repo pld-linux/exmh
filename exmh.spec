@@ -1,12 +1,12 @@
 Summary:	The exmh mail handling system
-Summary(de):	EXMH-Mail-Programm
-Summary(es):	Interface gráfica para el programa de mail MH
-Summary(fr):	Programme de courrier EXMH
-Summary(pl):	System obs³ugi poczty exmh
-Summary(pt_BR):	Interface gráfica para o programa de mail MH
-Summary(ru):	ğÏŞÔÏ×ÁÑ ĞÒÏÇÒÁÍÍÁ EXMH
-Summary(sv):	E-postläsare som kan hantera e-postmappar av mh-typ
-Summary(tr):	e-posta yazılımı
+Summary(de.UTF-8):   EXMH-Mail-Programm
+Summary(es.UTF-8):   Interface grÃ¡fica para el programa de mail MH
+Summary(fr.UTF-8):   Programme de courrier EXMH
+Summary(pl.UTF-8):   System obsÅ‚ugi poczty exmh
+Summary(pt_BR.UTF-8):   Interface grÃ¡fica para o programa de mail MH
+Summary(ru.UTF-8):   ĞŸĞ¾Ñ‡Ñ‚Ğ¾Ğ²Ğ°Ñ Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ° EXMH
+Summary(sv.UTF-8):   E-postlÃ¤sare som kan hantera e-postmappar av mh-typ
+Summary(tr.UTF-8):   e-posta yazÄ±lÄ±mÄ±
 Name:		exmh
 Version:	2.7.2
 Release:	1
@@ -38,45 +38,45 @@ MH/nmh mail system much more user friendly. You may also want to use
 exmh if you prefer a graphical user interface for your mail client.
 Note that you will also have to install the nmh package.
 
-%description -l de
-exmh ist eine grafische Oberfläche für das MH-Mail-System. Zu den
-Funktionen gehören MIME-Unterstützung, Faces, Glimpse-Indexing,
+%description -l de.UTF-8
+exmh ist eine grafische OberflÃ¤che fÃ¼r das MH-Mail-System. Zu den
+Funktionen gehÃ¶ren MIME-UnterstÃ¼tzung, Faces, Glimpse-Indexing,
 farbiges Markieren, PGP-Schnittstelle usw. Erfordert sox (oder play)
-für Sound-Unterstützung.
+fÃ¼r Sound-UnterstÃ¼tzung.
 
-%description -l es
-exmh es una interface gráfica para el sistema de mail MH. Incluye
-soporte para MINE, cuadros, indexación rápida, realce de colores,
-interface PGP, y más.
+%description -l es.UTF-8
+exmh es una interface grÃ¡fica para el sistema de mail MH. Incluye
+soporte para MINE, cuadros, indexaciÃ³n rÃ¡pida, realce de colores,
+interface PGP, y mÃ¡s.
 
-%description -l fr
-exmh est uen interface graphique au système de courrier MH. Il gère
+%description -l fr.UTF-8
+exmh est uen interface graphique au systÃ¨me de courrier MH. Il gÃ¨re
 MIME, les aspects, l'indexation glimpse, la mise en valeur par
-couleurs, PGP, et autres. Il faut sox (ou play) pour gérér le son.
+couleurs, PGP, et autres. Il faut sox (ou play) pour gÃ©rÃ©r le son.
 
-%description -l pl
-Dziêki exmh otrzymujemy interfejs do bogatego w funkcje systemu
-obs³ugi poczty MH/nmh. Exmh obs³uguje prawie wszystkie funkcje MH:
-przegl±danie wiadomo¶ci w katalogu, czytanie/usuwanie/kolejkowanie
-wiadomo¶ci oraz sortowanie poczty przychodz±cej do ró¿nych katalogów.
-Exmh pod¶wietla foldery z nowymi wiadomo¶ciami i wskazuje te, które
-nie zosta³y jeszcze przeczytane, dziêki czemu nie traci siê
-posortowanych, nieprzeczytanych wiadomo¶ci.
+%description -l pl.UTF-8
+DziÄ™ki exmh otrzymujemy interfejs do bogatego w funkcje systemu
+obsÅ‚ugi poczty MH/nmh. Exmh obsÅ‚uguje prawie wszystkie funkcje MH:
+przeglÄ…danie wiadomoÅ›ci w katalogu, czytanie/usuwanie/kolejkowanie
+wiadomoÅ›ci oraz sortowanie poczty przychodzÄ…cej do rÃ³Å¼nych katalogÃ³w.
+Exmh podÅ›wietla foldery z nowymi wiadomoÅ›ciami i wskazuje te, ktÃ³re
+nie zostaÅ‚y jeszcze przeczytane, dziÄ™ki czemu nie traci siÄ™
+posortowanych, nieprzeczytanych wiadomoÅ›ci.
 
-%description -l pt_BR
-exmh é uma interface gráfica para o sistema de mail MH. Ela inclui
-suporte para MIME, quadros, indexação rápida, destacamento de cores,
+%description -l pt_BR.UTF-8
+exmh Ã© uma interface grÃ¡fica para o sistema de mail MH. Ela inclui
+suporte para MIME, quadros, indexaÃ§Ã£o rÃ¡pida, destacamento de cores,
 interface PGP, e mais.
 
-%description -l ru
-exmh - ÜÔÏ ÇÒÁÆÉŞÅÓËÉÊ ÉÎÔÅÒÆÅÊÓ Ë ĞÏŞÔÏ×ÏÊ ÓÉÓÔÅÍÅ MH. ïÎ ×ËÌÀŞÁÅÔ
-ĞÏÄÄÅÒÖËÕ MIME, faces, glimpse indexing, color highlighting, ÉÎÔÅÒÆÅÊÓ
-PGP É ÍÎÏÇÏÅ ÄÒÕÇÏÅ. äÌÑ ĞÏÄÄÅÒÖËÉ Ú×ÕËÁ ÔÒÅÂÕÅÔÓÑ sox.
+%description -l ru.UTF-8
+exmh - ÑÑ‚Ğ¾ Ğ³Ñ€Ğ°Ñ„Ğ¸Ñ‡ĞµÑĞºĞ¸Ğ¹ Ğ¸Ğ½Ñ‚ĞµÑ€Ñ„ĞµĞ¹Ñ Ğº Ğ¿Ğ¾Ñ‡Ñ‚Ğ¾Ğ²Ğ¾Ğ¹ ÑĞ¸ÑÑ‚ĞµĞ¼Ğµ MH. ĞĞ½ Ğ²ĞºĞ»ÑÑ‡Ğ°ĞµÑ‚
+Ğ¿Ğ¾Ğ´Ğ´ĞµÑ€Ğ¶ĞºÑƒ MIME, faces, glimpse indexing, color highlighting, Ğ¸Ğ½Ñ‚ĞµÑ€Ñ„ĞµĞ¹Ñ
+PGP Ğ¸ Ğ¼Ğ½Ğ¾Ğ³Ğ¾Ğµ Ğ´Ñ€ÑƒĞ³Ğ¾Ğµ. Ğ”Ğ»Ñ Ğ¿Ğ¾Ğ´Ğ´ĞµÑ€Ğ¶ĞºĞ¸ Ğ·Ğ²ÑƒĞºĞ° Ñ‚Ñ€ĞµĞ±ÑƒĞµÑ‚ÑÑ sox.
 
-%description -l tr
-exmh, yaygın olarak kullanılan mh paketi için X11 arayüzüdür. MIME
-desteği, PGP desteği, faces, glimpse yardımıyla dizin oluşturma gibi
-yetenekleri vardır. Ses desteği için sox (ya da play) gerekir.
+%description -l tr.UTF-8
+exmh, yaygÄ±n olarak kullanÄ±lan mh paketi iÃ§in X11 arayÃ¼zÃ¼dÃ¼r. MIME
+desteÄŸi, PGP desteÄŸi, faces, glimpse yardÄ±mÄ±yla dizin oluÅŸturma gibi
+yetenekleri vardÄ±r. Ses desteÄŸi iÃ§in sox (ya da play) gerekir.
 
 %prep
 %setup -q
