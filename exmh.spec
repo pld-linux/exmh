@@ -1,12 +1,12 @@
 Summary:	The exmh mail handling system
-Summary(de.UTF-8):   EXMH-Mail-Programm
-Summary(es.UTF-8):   Interface gráfica para el programa de mail MH
-Summary(fr.UTF-8):   Programme de courrier EXMH
-Summary(pl.UTF-8):   System obsługi poczty exmh
-Summary(pt_BR.UTF-8):   Interface gráfica para o programa de mail MH
-Summary(ru.UTF-8):   Почтовая программа EXMH
-Summary(sv.UTF-8):   E-postläsare som kan hantera e-postmappar av mh-typ
-Summary(tr.UTF-8):   e-posta yazılımı
+Summary(de.UTF-8):	EXMH-Mail-Programm
+Summary(es.UTF-8):	Interface gráfica para el programa de mail MH
+Summary(fr.UTF-8):	Programme de courrier EXMH
+Summary(pl.UTF-8):	System obsługi poczty exmh
+Summary(pt_BR.UTF-8):	Interface gráfica para o programa de mail MH
+Summary(ru.UTF-8):	Почтовая программа EXMH
+Summary(sv.UTF-8):	E-postläsare som kan hantera e-postmappar av mh-typ
+Summary(tr.UTF-8):	e-posta yazılımı
 Name:		exmh
 Version:	2.7.2
 Release:	1
